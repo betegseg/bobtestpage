@@ -1,0 +1,142 @@
+:root{
+  --color-scheme: dark;
+  --font-family: system-ui;
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+
+  --clr-primary: hsl(49, 100%, 60%);
+  --clr-primary-darkened: hsl(49, 81%, 56%);
+}
+
+* {
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(#141d25, #000000);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  height: 100vh;
+}
+/* START NAVIGATION */
+nav {
+  box-shadow: 3px 3px 5px hsl(0, 0%, 0%);
+  background-color: var(--clr-primary);
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: var(--fs-400);
+}
+nav a:hover {
+  background-color: var(--clr-primary-darkened);
+}
+nav li:first-child {
+  margin-right: auto;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 10;
+  background-color: hsla(49, 100%, 60%, 0.774);
+  backdrop-filter: blur(10px);
+  box-shadow: -5px 0 5px black;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
+/* END NAVIGATION */
+
+/* BODY STYLES */
+h1 {
+  font-size: var(--fs-500);
+  color: var(--clr-primary);
+}
+
+.center-text {
+  text-align: center;
+}
+/* END BODY STYLES */
+
+/* GRID CONFIG */
+.content {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(50ch, 100% - var(--gap) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+  
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+.content > * {
+  grid-column: content;
+}
+.popout {
+  grid-column: popout;
+}
+.feature {
+  grid-column: feature;
+}
+.full {
+  grid-column: full;
+}
+/* END GRID CONFIG */
+
+/* MEDIA QUERIES */
+.menu {
+  display: none;
+}
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu{
+    display: block;
+  }
+}
+@media(max-width: 420px){
+  .sidebar{
+    width: 100%;
+  }
+}
+/* END MEDIA QUERIES */
