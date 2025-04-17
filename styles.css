@@ -90,6 +90,13 @@ h1 {
 }
 /* END BODY STYLES */
 
+/* FOOTER */
+footer {
+  background-color: hsl(0, 1%, 13%);
+  font-size: var(--fs-300);
+}
+/* END FOOTER */
+
 /* GRID CONFIG */
 .content {
   --gap: clamp(1rem, 6vw, 3rem);

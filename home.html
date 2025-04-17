@@ -12,7 +12,11 @@
 <body>
   <nav>
     <ul class="sidebar">
-      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+            viewBox="0 -960 960 960" width="26px" fill="#000000">
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg></a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Gallery</a></li>
       <li><a href="#">Available Puppies</a></li>
@@ -24,26 +28,47 @@
       <li class="hideOnMobile"><a href="#">Gallery</a></li>
       <li class="hideOnMobile"><a href="#">Available Puppies</a></li>
       <li class="hideOnMobile"><a href="#">Contact</a></li>
-      <li class="menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      <li class="menu" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px"
+            viewBox="0 -960 960 960" width="26px" fill="#000000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg></a></li>
     </ul>
   </nav>
   <main class="content">
     <section class="full">
-      <video class="" src="istockphoto-1044942718-640_adpp_is.mp4" preload="auto" width="100%" autoplay muted loop></video>
+      <video class="" src="resources/istockphoto-1044942718-640_adpp_is.mp4" preload="auto" width="100%" autoplay muted
+        loop></video>
     </section>
     <section class="full">
       <h1 class="center-text">From Our Loving Home to Yours - AKC Quality Boxer Puppies</h1>
     </section>
-    <section><h2>This is what items look like in the regular content grid.</h2><p>Esse tempor elit ullamco nulla amet ullamco ut dolore commodo aliquip ex cupidatat incididunt minim. Anim ut sunt eu excepteur voluptate veniam laboris ad esse proident nisi. Aliqua cupidatat dolor magna esse eu ex. Ex elit eu qui ullamco laboris nulla quis consectetur velit. Consequat fugiat velit fugiat amet reprehenderit laboris qui labore nulla ipsum labore minim cillum in. Id non duis minim tempor cupidatat est id ad aute aliquip non sit sunt exercitation.</p></section>
-    <section class="popout"><h2>Popout has slightly more space.</h2><p>Voluptate amet incididunt mollit commodo. Eiusmod incididunt in elit consequat do elit id sunt non tempor irure eiusmod non cupidatat. Voluptate commodo anim velit nisi elit excepteur enim officia fugiat.</p></section>
-    <section class="feature"><h2>This is a feature</h2><p>Minim cupidatat anim nostrud nulla sit aliqua officia culpa esse id minim duis ex. Culpa enim veniam esse eu irure non sit culpa non minim adipisicing. Elit est exercitation sint enim est sint cillum. Minim aliquip eu quis occaecat exercitation. Lorem elit consequat incididunt tempor aliquip dolore ea.</p></section>
+    <section>
+      <h2>This is what items look like in the regular content grid.</h2>
+      <p>Esse tempor elit ullamco nulla amet ullamco ut dolore commodo aliquip ex cupidatat incididunt minim. Anim ut
+        sunt eu excepteur voluptate veniam laboris ad esse proident nisi. Aliqua cupidatat dolor magna esse eu ex. Ex
+        elit eu qui ullamco laboris nulla quis consectetur velit. Consequat fugiat velit fugiat amet reprehenderit
+        laboris qui labore nulla ipsum labore minim cillum in. Id non duis minim tempor cupidatat est id ad aute aliquip
+        non sit sunt exercitation.</p>
+    </section>
+    <section class="popout">
+      <h2>Popout has slightly more space.</h2>
+      <p>Voluptate amet incididunt mollit commodo. Eiusmod incididunt in elit consequat do elit id sunt non tempor irure
+        eiusmod non cupidatat. Voluptate commodo anim velit nisi elit excepteur enim officia fugiat.</p>
+    </section>
+    <section class="feature">
+      <h2>This is a feature</h2>
+      <p>Minim cupidatat anim nostrud nulla sit aliqua officia culpa esse id minim duis ex. Culpa enim veniam esse eu
+        irure non sit culpa non minim adipisicing. Elit est exercitation sint enim est sint cillum. Minim aliquip eu
+        quis occaecat exercitation. Lorem elit consequat incididunt tempor aliquip dolore ea.</p>
+    </section>
   </main>
+  <footer class="center-text">&copy;2025 Black Oak Boxers</footer>
   <script>
-    function showSidebar(){
+    function showSidebar() {
       const sidebar = document.querySelector('.sidebar')
       sidebar.style.display = 'flex'
     }
-    function hideSidebar(){
+    function hideSidebar() {
       const sidebar = document.querySelector('.sidebar')
       sidebar.style.display = 'none'
     }
